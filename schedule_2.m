@@ -1,0 +1,11 @@
+[x1,y1] = meshgrid(-10:0.5:10,-10:0.5:10);
+a = input("Input a: ");
+z1 = a .* sin(sqrt(x.^2+y.^2))./sqrt(x.^2+y.^2);
+figure;
+plot3(x1,y1,z1);
+[x2,y2] = meshgrid(-10:0.5:10,-10:0.5:10);
+z2 = -x2.*sin(x2)-y2.*cos(y2);
+title("problem a");
+figure;
+mesh(x2,y2,z2);
+title("problem b");

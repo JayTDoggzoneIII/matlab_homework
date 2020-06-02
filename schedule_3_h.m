@@ -1,0 +1,11 @@
+a = input("Input a: ");
+b = input("Input b: ");
+z = 0:0.1:4;
+beta = -2*pi:pi/12:2*pi;
+r = a.*((z+b).^2).*log(z+b);
+[Z,Beta] = meshgrid(z,beta);
+x = r.*sin(Beta);
+y = r.*cos(Beta);
+z = Z;
+surf(x,y,z);
+title("Hyperbole-Logarithmic Surface");

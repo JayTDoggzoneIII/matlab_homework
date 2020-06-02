@@ -1,0 +1,10 @@
+[alpha,beta] = meshgrid(-2*pi:pi/12:2*pi,-2*pi:pi/12:2*pi);
+a = input("Input a: ");
+c = input("Input c: ");
+x = a*cosh(alpha).*cos(beta);
+y = a*cosh(alpha).*sin(beta);
+z = c*sinh(alpha);
+figure;
+surfc(x,y,z);
+surfc(x,y,-z);
+title("Unilobular hyperboloid of rotation");

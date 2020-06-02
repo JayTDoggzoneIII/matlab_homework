@@ -1,0 +1,10 @@
+r = -10:0.1:10;
+p = input("Input p: ");
+beta = -2:0.1:2;
+[Beta,R] = meshgrid(beta,r);
+x = R.*cos(Beta);
+y = R.*sin(Beta);
+z = (R.^2/(2*p)).*ones(size(Beta));
+figure;
+mesh(x,y,z);
+title("Paraboloid of Rotation");

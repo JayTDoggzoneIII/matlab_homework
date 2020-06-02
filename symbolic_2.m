@@ -1,0 +1,13 @@
+syms x y;
+disp("#1");
+f1 = x*exp(-x);
+ans1 = limit(f1,x,inf);
+disp(ans1);
+disp("#2");
+f2 = tan(x).^tan(2*x);
+ans2 = limit(f2,x,pi/4);
+disp(ans2);
+disp("#3");
+f3 = atan(1/(1-x));
+ans3 = limit(f3,x,1,'right');
+disp(ans3);

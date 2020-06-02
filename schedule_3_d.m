@@ -1,0 +1,12 @@
+a = input("Input a: ");
+b = input("Input b: ");
+alfa_min = input("Input alfa_min: ");
+alfa_max = input("Input alfa_max: ");
+beta = -pi:0.05*pi:pi;
+alfa = (alfa_min:0.05:alfa_max)';
+x = a*alfa*cosh(beta);
+y = b*alfa*sinh(beta);
+z = alfa.^2*ones(size(beta));
+figure;
+mesh(x,y,z);
+title("Hyperbolic Paraboloid");

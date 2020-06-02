@@ -1,0 +1,12 @@
+a1 = 0;
+b1 = 4;
+x = linspace(0,4,100);
+Y = 2-abs(x).*exp(-abs(x-1));
+Y1 =@(x)2-abs(x).*exp(-abs(x-1));
+plot(x,Y);
+grid on;
+xr = ginput(2);
+[x_m,y_m] = fminbnd(Y1,xr(1,1),xr(2,1));
+hold on;
+plot(x_m,y_m,'r*',xr(1,1),xr(1,2),'g*',xr(2,1),xr(2,2),'g*');
+hold off;

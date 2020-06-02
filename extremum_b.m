@@ -1,0 +1,12 @@
+a1 = 1;
+b1 = 2;
+x = linspace(0,2/3*pi,100);
+Y = 1./(a1.*cos(x)+b1.*sin(x)).^2;
+Y1 =@(x)1./(a1.*cos(x)+b1.*sin(x)).^2;
+plot(x,Y);
+grid on;
+xr = ginput(2);
+[x_m,y_m] = fminbnd(Y1,xr(1,1),xr(2,1));
+hold on;
+plot(x_m,y_m,'r*',xr(1,1),xr(1,2),'g*',xr(2,1),xr(2,2),'g*');
+hold off;

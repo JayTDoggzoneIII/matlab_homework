@@ -1,0 +1,12 @@
+u_max = input("Input u_max: ");
+v_min = input("Input v_min: ");
+v_max = input("Input v_max: ");
+a = input("Input a: ");
+u = 0:0.1:u_max;
+v = v_min:0.1:v_max;
+[U,V] = meshgrid(u,v);
+x = a*U.^2;
+y = 2*a*U;
+z = V;
+surfc(x,y,z);
+title("Parabolic Cylinder");

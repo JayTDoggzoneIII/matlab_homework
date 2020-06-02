@@ -1,0 +1,10 @@
+a = 1;
+mu = 0.2;
+w = 4;
+phi = pi/2;
+[r,u] = meshgrid(-2:0.1:2,-2*pi:pi/12:2*pi);
+x = r.*cos(u);
+y = r.*sin(u);
+z = a*exp(-mu.*r).*sin(w.*r+phi);
+surf(x,y,z);
+title("Surrounding Wave Surface");
